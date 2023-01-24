@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    box-sizing: border-box;
+    /* font-family: 'Oxygen Mono', monospace; */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #F9A826;
+}
+
+.nav-header {
+    cursor: default;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-shadow: -1px 6px 5px 0px rgba(0, 0, 0, 0.36);
+    z-index: 2;
+    /* background: var(--actioncolor); */
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondarycolor);
+    font-size: 1.2rem;
+}
+
+
+/* .nav-link:hover {
+    font-size: 1.5rem;
+    transition: font-size 0.5s ease 0s;
+} */
+
+.nav-list {
+    display: inline-block;
+    padding: 0rem 1.8rem;
+}
+
+.brand {
+    font-size: 1.8rem;
+    color: var(--secondarycolor);
+}
+
+.nav-header a {
+    text-decoration: none;
+}

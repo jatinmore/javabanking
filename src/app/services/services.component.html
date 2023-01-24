@@ -1,0 +1,41 @@
+<!-- <img class="service-img" src="assets/icons/undraw_Credit_card_re_blml.png" alt=""> -->
+<!-- 
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let c of services">
+        <img class="service-img" src="{{c.img}}" alt="">
+        <div class="heading">
+            <span>{{c.name}}</span> 
+            <button (click)="getService()" class="btn">{{c.name}}</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="grid-container">
+    <div class="grid-item">
+        <img class="service-img" src="assets/icons/2.png" alt="">
+        <div class="heading">
+            <button (click)="getUserService()" class="btn">USER</button>
+        </div>
+
+
+    </div>
+    <div class="grid-item">
+        <img class="service-img" src="assets/icons/3.png" alt="">
+        <div class="heading">
+            <button (click)="getService()" class="btn">ACCOUNT</button>
+        </div>
+
+
+    </div>
+    <div class="grid-item">
+        <img class="service-img" src="assets/icons/1.png" alt="">
+        <div class="heading">
+            <button (click)="getService()" class="btn">TRANSACTION</button>
+        </div>
+
+
+    </div>
+
+
+</div>
+<router-outlet></router-outlet>

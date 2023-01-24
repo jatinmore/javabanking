@@ -1,0 +1,25 @@
+const ROUTES:Routes = [
+  {
+    path:'login',component:LoginComponent
+  },
+  {
+    path:'services',component:ServicesComponent,
+    children:[
+      {path:'user',component:UserComponent,
+      children:[
+        {path:'adduser',component:AdduserComponent},
+        {path:'showuser',component:ShowuserComponent}
+      ]
+    
+    },
+      {path:'account',component:AccountComponent},
+      {path:'transaction',component:TransactionComponent}
+    ]
+
+  },
+  
+  {
+    path:'about',component:AboutComponent
+
+  },
+]

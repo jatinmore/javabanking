@@ -1,0 +1,14 @@
+<div class="container">
+
+    <div class="form">
+        <span class="header">Login</span>
+        <form class="form">
+            <label class="form-label">Username:</label>
+            <input class="form-control" type="text" [(ngModel)]="id">
+            <label class="form-label">Password:</label>
+            <input class="form-control" type="text" [(ngModel)]="pass">
+            <button class="btn-login" (click)="onSubmit()" type="submit">Login</button>
+
+        </form>
+    </div>
+</div>
