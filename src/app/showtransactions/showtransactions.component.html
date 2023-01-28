@@ -1,0 +1,21 @@
+<p>showtransactions works!</p>
+
+<table>
+    <thead>
+        <th>Transaction ID</th>
+        <th>Txn Date</th>
+        <th>Txn Amount</th>
+        <th>Txn Type</th>
+        <th>Remarks</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of transactions">
+            <td>{{c.transId}}</td>
+            <td>{{c.Date}}</td>
+            <td>{{c.transAmt}}</td>
+            <td>{{c.tnxType}}</td>
+            <td>{{c.remark}}</td>
+        </tr>
+    </tbody>
+</table>
