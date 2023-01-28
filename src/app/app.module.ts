@@ -7,7 +7,7 @@ import { NavComponent } from './nav/nav.component';
 import { LoginComponent } from './login/login.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdduserComponent } from './adduser/adduser.component';
 import { ShowuserComponent } from './showuser/showuser.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
@@ -15,7 +15,7 @@ import { ShowaccountdetailsComponent } from './showaccountdetails/showaccountdet
 import { UserComponent } from './user/user.component';
 import { AccountComponent } from './account/account.component';
 import { TransactionComponent } from './transaction/transaction.component';
-
+import {HttpClientModule} from '@angular/common/http';
 const ROUTES:Routes = [
   { path:'login',component:LoginComponent},
   {path:'services',component:ServicesComponent},
@@ -46,7 +46,9 @@ const ROUTES:Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

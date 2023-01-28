@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,23 +8,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  loginForm: FormGroup;
+    mockLogin={
+    id:"user1",
+    pass:"password1"
   }
-  id='';
-  pass=''
-  mockLogin={
-    username:"user1",
-    password:"password1"
+  ngOnInit(): void {}
+  constructor(private router:Router) { 
+    this.loginForm = new FormGroup({
+      'username':new FormControl(null,Validators.required),
+      'password':new FormControl(null,Validators.required)
+    })
   }
+
   onSubmit(){
-    if(this.id == this.mockLogin.username && this.pass==this.mockLogin.password){
-        console.log("login successful")
-    } 
-    else{
-      console.log("invalid creds")
-    }
+  //  console.log( this.myFormModel.value);
+  // if(this.loginForm.value(0)==this.mockLogin.id){
+  //   console.log("login succeed")
+  // }
+  // else{
+  //   console.log("login failed")
+  // }
+  console.log(this.loginForm.value)
+  this.router.navigate(['/services'])
   }
+
+
+  // id='';
+  // pass=''
+
+  // onSubmit(){
+  //   if(this.id == this.mockLogin.username && this.pass==this.mockLogin.password){
+  //       console.log("login successful")
+  //   } 
+  //   else{
+  //     console.log("invalid creds")
+  //   }
+  // }
+
+
+
+
 }

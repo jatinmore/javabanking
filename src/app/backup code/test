@@ -23,3 +23,22 @@ const ROUTES:Routes = [
 
   },
 ]
+
+
+//form code login demo
+ngOnInit(): void {}
+  id='';
+  pass=''
+  mockLogin={
+    username:"user1",
+    password:"password1"
+  }
+  onSubmit(){
+    if(this.id == this.mockLogin.username && this.pass==this.mockLogin.password){
+        console.log("login successful")
+    } 
+    else{
+      console.log("invalid creds")
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
     <div class="form">
         <span class="header">Login</span>
@@ -11,4 +11,23 @@
 
         </form>
     </div>
+</div> -->
+
+<div class="container">
+    <div class="form">
+        <span class="header">Login</span>
+
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <label class="form-label">Username:</label>
+            <input class="form-control" type="text" name="username" placeholder="Enter UserName" formControlName="username">
+
+            <label class="form-label">Password:</label>
+            <input class="form-control" type="password" name="password" placeholder="Enter Password" formControlName="password" id="">
+
+            <button class="btn-login" (click)="onSubmit()" type="submit">Login</button>
+
+        </form>
+
+    </div>
+
 </div>

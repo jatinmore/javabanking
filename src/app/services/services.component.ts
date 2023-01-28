@@ -35,6 +35,14 @@ export class ServicesComponent implements OnInit {
     console.log("called")
 
   }
+  getTransactionService(){
+    this.router.navigate(['/transaction'])
+    console.log('transaction route')
+  }
+  getAccountService(){
+    this.router.navigate(['/account'])
+    console.log('account route')
+  }
   getUserService(){
     this.router.navigate(['/user'])
     console.log('user route')
