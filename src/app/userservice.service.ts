@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { User } from './users';
 
 @Injectable({
@@ -14,4 +14,45 @@ export class UserserviceService {
     return this.http.get<User[]>(this.url)
   }
 
+  // addUser(user:User ){
+  //     let httpHeaders = new HttpHeaders({
+  //       'Content-Type':'application/json'
+  //     })
+
+
+  //     console.log('saving users :'+user.userid+''+user.username+''+user.password) 
+  //     return this.http.post<User>(this.url+"/",user,{
+  //       headers:httpHeaders,
+  //       observe:'response'
+  //     }).pipe(
+  //       map(res => res.status),
+  //       catchError(this.handleError)
+  //     );
+  // }
+
+  addUser(user:User):Observable<User>{
+    return this.http.post<User>(this.url,user)
+  }
+  // post(url, body, options): Observable<any> 
+  createUser(user:any):Observable<Object>{
+    console.log("post call")
+    return this.http.post(this.url,user)
+    
+  }
+
+  editUser(user:User):Observable<any>{
+    return this.http.put(this.url+user.userid,user)
+  }
+
+  getUserById(id:number):Observable<User>{
+    return this.http.get<User>(this.url+id)
+  }
+  deleteUser(id:number):Observable<any>{
+    return this.http.delete(this.url+id)
+  }
+
+  private handleError(error: any) {
+    console.error("Error : "+error);
+    return throwError(error)
+}
 }

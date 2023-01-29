@@ -1,2 +1,11 @@
 <p>adduser works!</p>
+
+<form [formGroup]="addUsers" (ngSubmit)="onUserFormSubmit()">
+    username:<input type="text" formControlName="username" required> password:
+    <input type="password" formControlName="password" required>
+    <button type="submit">Add User</button>
+
+
+</form>
+
 <router-outlet></router-outlet>
