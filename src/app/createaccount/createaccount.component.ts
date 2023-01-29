@@ -36,11 +36,7 @@ export class CreateaccountComponent implements OnInit {
   
   }
   saveAccountDetails(){
-    // let user=this.addUsers.value
-    // this._userService.createUser(user).subscribe(data=>{
-    //   data=user
-    //   console.log(data)
-    // })
+  
 
     let acc=this.createAccount.value
     this._accountService.createAccount(acc).subscribe(
@@ -51,9 +47,6 @@ export class CreateaccountComponent implements OnInit {
     )
   }
     onAccFormSubmit(){
-      // this.saveUser()
-      // console.log(this.users)
-      // this.router.navigate(['/showuser'])
 
       this.saveAccountDetails()
       console.log(this.account)
