@@ -17,6 +17,7 @@ import { AccountComponent } from './account/account.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShowtransactionsComponent } from './showtransactions/showtransactions.component';
+import { CreatetransactionComponent } from './createtransaction/createtransaction.component';
 const ROUTES:Routes = [
   { path:'login',component:LoginComponent},
   {path:'services',component:ServicesComponent},
@@ -27,8 +28,8 @@ const ROUTES:Routes = [
   {path:'addaccount',component:CreateaccountComponent},
   {path:'showAccounts',component:ShowaccountdetailsComponent},
   {path:'transaction',component:TransactionComponent},
-  {path:'showTxns',component:ShowtransactionsComponent},
-
+  {path:'addtxns',component:CreatetransactionComponent},
+  {path:'showtxns',component:ShowtransactionsComponent},
   {path:'about',component:AboutComponent},
 ]
 
@@ -46,7 +47,8 @@ const ROUTES:Routes = [
     UserComponent,
     AccountComponent,
     TransactionComponent,
-    ShowtransactionsComponent
+    ShowtransactionsComponent,
+    CreatetransactionComponent
   ],
   imports: [
     BrowserModule,

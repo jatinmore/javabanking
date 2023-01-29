@@ -12,4 +12,22 @@ export class TransactionserviceService {
   getAllTransactions():Observable<Transactions[]>{
     return this.http.get<Transactions[]>(this.url)
   }
+
+  createTrxn(transaction:any):Observable<Object>{
+    console.log("post call")
+    return this.http.post(this.url,transaction)
+  }
+
+
+
+  editTrxnDetails(transaction:Transactions):Observable<any>{
+    return this.http.put(this.url+transaction.transId,transaction)
+  }
+
+  getTrxnById(id:number):Observable<Transactions>{
+    return this.http.get<Transactions>(this.url+id)
+  }
+  deleteTrxn(id:number):Observable<any>{
+    return this.http.delete(this.url+id)
+  }
 }

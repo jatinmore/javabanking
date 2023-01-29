@@ -5,9 +5,9 @@ export interface Transactions{
 	// double transAmt;
 	// String txnType;
 
-    transId:number,
-    Date:string,
-    remark:string,
-    transAmt:number,
-    tnxType:string
+    transId:number;
+    Date:string;
+    remark:string;
+    transAmt:number;
+    tnxType:string;
 }
