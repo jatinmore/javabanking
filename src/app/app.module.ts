@@ -24,6 +24,7 @@ const ROUTES:Routes = [
   {path:'adduser',component:AdduserComponent},
   {path:'showuser',component:ShowuserComponent},
   {path:'account',component:AccountComponent},
+  {path:'addaccount',component:CreateaccountComponent},
   {path:'showAccounts',component:ShowaccountdetailsComponent},
   {path:'transaction',component:TransactionComponent},
   {path:'showTxns',component:ShowtransactionsComponent},

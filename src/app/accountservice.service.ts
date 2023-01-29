@@ -15,4 +15,25 @@ export class AccountserviceService {
     return this.http.get<Account[]>(this.url);
 
   }
+
+  createAccount(account:any):Observable<Object>{
+    console.log("post call")
+    return this.http.post(this.url,account)
+
+
+  } 
+
+
+  editAccountDetails(account:Account):Observable<any>{
+    return this.http.put(this.url+account.accId,account)
+  }
+
+  getAccountById(id:number):Observable<Account>{
+    return this.http.get<Account>(this.url+id)
+  }
+  deleteAccount(id:number):Observable<any>{
+    return this.http.delete(this.url+id)
+  }
+
+
 }

@@ -1,1 +1,10 @@
 <p>createaccount works!</p>
+
+// accHolderName:string, // userEmail:string, // resAddress:string, // branchAddress:string, // openDate:string, // mobile:string, // dob:string
+
+<form [formGroup]="createAccount" (ngSubmit)="onAccFormSubmit()">
+    Name: <input type="text" formControlName="accHolderName" required> Email: <input type="email" formControlName="userEmail" required> resAddress: <input type="text" formControlName="resAddress" required> branchAddress: <input type="text" formControlName="branchAddress"
+        required> AccOpenDate: <input type="date" formControlName="openDate"> mobile: <input type="number" formControlName="mobile"> dob: <input type="date" formControlName="dob"> userid:
+    <input type="number" formControlName="userid">
+    <button type="submit">Create Account</button>
+</form>

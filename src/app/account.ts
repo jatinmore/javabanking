@@ -18,4 +18,5 @@ export interface Account{
     mobile:string,
     isActive:string,
     dob:string
+    userid:number
 }

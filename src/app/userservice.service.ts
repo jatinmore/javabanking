@@ -14,25 +14,11 @@ export class UserserviceService {
     return this.http.get<User[]>(this.url)
   }
 
-  // addUser(user:User ){
-  //     let httpHeaders = new HttpHeaders({
-  //       'Content-Type':'application/json'
-  //     })
+ 
 
-
-  //     console.log('saving users :'+user.userid+''+user.username+''+user.password) 
-  //     return this.http.post<User>(this.url+"/",user,{
-  //       headers:httpHeaders,
-  //       observe:'response'
-  //     }).pipe(
-  //       map(res => res.status),
-  //       catchError(this.handleError)
-  //     );
+  // addUser(user:User):Observable<User>{
+  //   return this.http.post<User>(this.url,user)
   // }
-
-  addUser(user:User):Observable<User>{
-    return this.http.post<User>(this.url,user)
-  }
   // post(url, body, options): Observable<any> 
   createUser(user:any):Observable<Object>{
     console.log("post call")
@@ -51,8 +37,8 @@ export class UserserviceService {
     return this.http.delete(this.url+id)
   }
 
-  private handleError(error: any) {
-    console.error("Error : "+error);
-    return throwError(error)
-}
+//   private handleError(error: any) {
+//     console.error("Error : "+error);
+//     return throwError(error)
+// }
 }
