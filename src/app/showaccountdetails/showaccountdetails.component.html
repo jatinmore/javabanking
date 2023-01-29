@@ -1,27 +1,28 @@
-<p>showaccountdetails works!</p>
-<table>
-    <thead>
-        <th>Acc No.</th>
-        <th>Acc Holder</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Branch Address</th>
-        <th>Open Date</th>
-        <th>Mobile</th>
-        <th>isActive</th>
-        <th>DOB</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let c of  account">
-            <td>{{c.accId}}</td>
-            <td>{{c.accHolderName}}</td>
-            <td>{{c.userEmail}}</td>
-            <td>{{c.resAddress}}</td>
-            <td>{{c.branchAddress}}</td>
-            <td>{{c.openDate}}</td>
-            <td>{{c.mobile}}</td>
-            <td>{{c.isActive}}</td>
-            <td>{{c.dob}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+    <table>
+        <thead>
+            <th>Acc No.</th>
+            <th>Acc Holder</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Branch Address</th>
+            <th>Open Date</th>
+            <th>Mobile</th>
+            <th>isActive</th>
+            <th>DOB</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of  account">
+                <td>{{c.accId}}</td>
+                <td>{{c.accHolderName}}</td>
+                <td>{{c.userEmail}}</td>
+                <td>{{c.resAddress}}</td>
+                <td>{{c.branchAddress}}</td>
+                <td>{{c.openDate}}</td>
+                <td>{{c.mobile}}</td>
+                <td>{{c.isActive}}</td>
+                <td>{{c.dob}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

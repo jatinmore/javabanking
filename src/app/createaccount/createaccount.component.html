@@ -1,10 +1,26 @@
-<p>createaccount works!</p>
+<div class="container">
+    <div class="form">
+        <span class="header">Account</span>
+        <form class="form" [formGroup]="createAccount" (ngSubmit)="onAccFormSubmit()">
+            <label class="form-label">Name:</label>
+            <input class="form-control" type="text" formControlName="accHolderName" required>
+            <label class="form-label">Email:</label>
+            <input class="form-control" type="email" formControlName="userEmail" required>
+            <label class="form-label">resAddress:</label>
+            <input class="form-control" type="text" formControlName="resAddress" required>
+            <label class="form-label">branchAddress:</label>
+            <input class="form-control" type="text" formControlName="branchAddress" required>
+            <label class="form-label">AccOpenDate:</label>
 
-// accHolderName:string, // userEmail:string, // resAddress:string, // branchAddress:string, // openDate:string, // mobile:string, // dob:string
+            <input class="form-control" type="date" formControlName="openDate">
+            <label class="form-label">mobile:</label>
+            <input class="form-control" type="number" formControlName="mobile">
+            <label class="form-label">dob:</label>
+            <input class="form-control" type="date" formControlName="dob">
+            <label class="form-label">userid:</label>
+            <input class="form-control" type="number" formControlName="userid">
+            <button class="btn-login" type="submit">Create Account</button>
+        </form>
 
-<form [formGroup]="createAccount" (ngSubmit)="onAccFormSubmit()">
-    Name: <input type="text" formControlName="accHolderName" required> Email: <input type="email" formControlName="userEmail" required> resAddress: <input type="text" formControlName="resAddress" required> branchAddress: <input type="text" formControlName="branchAddress"
-        required> AccOpenDate: <input type="date" formControlName="openDate"> mobile: <input type="number" formControlName="mobile"> dob: <input type="date" formControlName="dob"> userid:
-    <input type="number" formControlName="userid">
-    <button type="submit">Create Account</button>
-</form>
+    </div>
+</div>

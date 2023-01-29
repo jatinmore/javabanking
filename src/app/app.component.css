@@ -1,0 +1,10 @@
+@import url('./login/login.component.css');
+.service-img {
+    margin-top: -5rem;
+    width: 70%;
+    height: 50%;
+}
+
+.container {
+    border: none;
+}

@@ -1,16 +1,18 @@
-<p>showuser works!</p>
-<table>
-    <thead>
-        <th>ID</th>
-        <th>Username</th>
-        <th>Password</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let c of user">
-            <td>{{c.userid}}</td>
-            <td>{{c.username}}</td>
-            <td>{{c.password}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of user">
+                <td>{{c.userid}}</td>
+                <td>{{c.username}}</td>
+                <td>{{c.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 <router-outlet></router-outlet>

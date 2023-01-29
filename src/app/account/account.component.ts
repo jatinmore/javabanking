@@ -17,6 +17,8 @@ export class AccountComponent implements OnInit {
     this.router.navigate(['/addaccount'])
   }
   showAccounts(){
+    console.log("called")
+    this.router.navigate(['/showAccounts'])
 
   }
 }

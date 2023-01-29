@@ -1,15 +1,22 @@
-<p>createtransaction works!</p>
-<form [formGroup]="addTrxn" (ngSubmit)="onTrxnFormSubmit()">
+<div class="container">
+    <div class="form">
+        <span class="header">Transaction</span>
+        <form class="form" [formGroup]="addTrxn" (ngSubmit)="onTrxnFormSubmit()">
 
-    <!-- // transId:number;
+            <!-- // transId:number;
     // Date:string;
     // remark:string;
     // transAmt:number;
     // tnxType:string; -->
-
-    TxnDate:<input type="date" formControlName="Date" required>
-    <br> transAmt: <input type="number" formControlName="transAmt" required>
-    <br> txnType: <input type="text" formControlName="txnType" required>
-    <br> remark: <input type="text" formControlName>
-    <button type="submit">Submit</button>
-</form>
+            <label class="form-label">TxnDate:</label>
+            <input class="form-control" type="date" formControlName="Date" required>
+            <label class="form-label">transAmt:</label>
+            <input class="form-control" type="number" formControlName="transAmt" required>
+            <label class="form-label">txnType:</label>
+            <input class="form-control" type="text" formControlName="txnType" required>
+            <label class="form-label">remark:</label>
+            <input class="form-control" type="text" formControlName>
+            <button class="btn-login" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
